@@ -9,7 +9,7 @@ import { CreateCourse } from "./components/CreateCourse/CreateCourse";
 import { EditCourse } from "./components/EditCourse/EditCourse";
 import { Prelogin } from "./components/Prelogin/Prelogin";
 import { RecoilRoot } from "recoil";
-import { UserPurchasedCourses } from "./components/userPurchasedCourses/userPurchasedCourses";
+import { UserPurchasedCourses } from "./components/UserPurchasedCourses/UserPurchasedCourses";
 import { AdminLogin } from "./components/Login/AdminLogin";
 import { AdminSignup } from "./components/Signup/AdminSignup";
 
