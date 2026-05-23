@@ -95,8 +95,8 @@ export const Login = () => {
       return;
     }
 
-    // ✅ ENV based API call
-    fetch(`${import.meta.env.VITE_BASE_URL}/users/login`, {
+    // ✅ DIRECT BACKEND URL (FIXED)
+    fetch("https://skillswap-ur6s.onrender.com/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -108,21 +108,25 @@ export const Login = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        alert(data.message);
+        console.log(data); // debug
 
         if (data.token) {
+          alert("Login successful ✅");
+
           // ✅ Token save
           localStorage.setItem("usertoken", data.token);
 
-          // ✅ Username save (for navbar display)
+          // ✅ Username save
           localStorage.setItem("username", username);
 
           navigate(`/users/courses`);
+        } else {
+          alert(data.message || "Login failed ❌");
         }
       })
       .catch((err) => {
         console.error(err);
-        alert("Login failed ❌");
+        alert("Backend not connected ❌");
       });
   };
 
@@ -154,12 +158,7 @@ export const Login = () => {
           />
 
           <div className="btn">
-            <Button
-              variant="contained"
-              onClick={() => {
-                handleLogin();
-              }}
-            >
+            <Button variant="contained" onClick={handleLogin}>
               Login
             </Button>
 
