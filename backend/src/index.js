@@ -80,9 +80,9 @@ app.use(express.json());
 
 // Port & DB
 const PORT = process.env.PORT || 3000;
-const DATABASE_URL = process.env.MONGO_URL; // ✅ same name as .env
+const DATABASE_URL = process.env.MONGO_URL;
 
-// Debug (optional - check karne ke liye)
+// Debug (optional)
 console.log("Mongo URL:", DATABASE_URL);
 
 // Test route
@@ -99,7 +99,8 @@ mongoose.connect(DATABASE_URL)
 .then(() => {
   console.log("DB connected ✅");
 
-  app.listen(PORT, () => {
+  // ✅ IMPORTANT FIX (Render ke liye)
+  app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on PORT: ${PORT}`);
   });
 })
