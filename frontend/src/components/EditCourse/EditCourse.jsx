@@ -9,7 +9,7 @@ export const EditCourse = () => {
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/admin/courses/${courseId}`, {
+    fetch(`https://skillswap-ur6s.onrender.com/admin/courses/${courseId}`, {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("admintoken"),

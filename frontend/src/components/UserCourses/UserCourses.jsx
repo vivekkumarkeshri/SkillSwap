@@ -12,7 +12,7 @@ export const UserCourses = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3002/users/courses")
+    fetch("https://skillswap-ur6s.onrender.com/users/courses")
       .then((response) => {
         return response.json();
       })

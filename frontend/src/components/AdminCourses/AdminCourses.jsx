@@ -8,7 +8,7 @@ export const AdminCourses = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/admin/courses", {
+    fetch("https://skillswap-ur6s.onrender.com/admin/courses", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("admintoken"),
       },

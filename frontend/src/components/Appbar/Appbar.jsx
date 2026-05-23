@@ -20,7 +20,7 @@ export const Appbar = () => {
 
   useEffect(() => {
     if (localStorage.getItem("usertoken")) {
-      fetch("http://localhost:3002/users/me", {
+      fetch("https://skillswap-ur6s.onrender.com/users/me", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("usertoken"),
         },

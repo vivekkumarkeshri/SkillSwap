@@ -16,7 +16,7 @@ export const AdminLogin = () => {
       alert("Please enter both the fields.");
       return;
     }
-    fetch(`http://localhost:3002/admin/login` , {
+    fetch(`https://skillswap-ur6s.onrender.com/admin/login` , {
       method: "POST",
       headers:{
         "Content-Type": "application/json"

@@ -7,7 +7,7 @@ export const UserPurchasedCourses = () => {
     const [courses, setCourses] = useState([]);
   
     useEffect(() => {
-      axios.get(`http://localhost:3000/users/purchasedCourses`, {
+      axios.get(`https://skillswap-ur6s.onrender.com/users/purchasedCourses`, {
         headers: {
             "Authorization": "Bearer " + localStorage.getItem("usertoken")
         }

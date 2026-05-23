@@ -14,7 +14,7 @@ export const CreateCourse = () => {
       alert("Please fill all the fields.");
       return;
     }
-    fetch("http://localhost:3000/admin/courses", {
+    fetch("https://skillswap-ur6s.onrender.com/admin/courses", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
